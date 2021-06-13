@@ -113,7 +113,7 @@ function writePassword() {
     
       console.log(password)
 
-      return password
+      return password 
   }
 
 }
