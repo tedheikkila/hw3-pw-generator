@@ -23,7 +23,7 @@ function writePassword() {
 
       // If user pressed Cancel at start, immediately end function
       if (!passwordLength) {
-      return;
+      return "No password generated (please enter a value and try again)";
       }
 
       // Do while loop creates recursion for multiple entries of bad data
@@ -52,7 +52,7 @@ function writePassword() {
       var charConfirm = window.confirm("The next four screens are for character type selection. Selecting more OK's will result in a stronger password (please select at least one). Click OK to continue.")
 
       if (!charConfirm) {
-        return;
+        return "No password generated (cancelled operation)";
       }
 
       //passwordArray, passwordLength, char type selectors as if statements
@@ -83,41 +83,38 @@ function writePassword() {
       //Concat the resulting arrays
       var passwordArray = lowerCase2.concat(upperCase2, numbers2, specChars2);
 
-      console.log(passwordArray.length)
+      // console.log(passwordArray.length)
 
-      //Randomly sort this array
-      function randomPasswordArray() {
-        for (let i = passwordArray.length -1; i > 0; i--) {
-            let j = Math.floor(Math.random() * i)
-            let k = passwordArray[i]
-            passwordArray[i] = passwordArray[j]
-            passwordArray[j] = k
-          }  
-      }
+      //Randomly sort passWordArray array using Fisher-Yates shuffle
+      function shuffle() {
+          var m = passwordArray.length, t, i;
+          while (m) {
+            i = Math.floor(Math.random() * m--);
+            t = passwordArray[m];
+            passwordArray[m] = passwordArray[i];
+            passwordArray[i] = t;
+          }
+          return passwordArray;
+        }
       
-      var randomPassword = randomPasswordArray(passwordArray)
+      var randomPasswordArray = shuffle(passwordArray)
 
-      console.log(randomPassword)
+      // console.log(randomPasswordArray)
+      // console.log(passwordLength)
 
-    //Splice down to size of entered value
+      //Splice down to size of entered value into (splicedPasswordArray)
+      var randomPasswordSliced = randomPasswordArray.slice(0,passwordLength)
+      
+      // console.log(randomPasswordSliced)
 
-    //Turn the final array into a string and display it
 
-
+      //Turn the final array into a string and display it
+      password = randomPasswordSliced.join("")
     
+      console.log(password)
 
-
-
-
-
-
-
-
+      return password
   }
-
-
-
-
 
 }
 
