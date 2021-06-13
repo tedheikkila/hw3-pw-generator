@@ -1,3 +1,5 @@
+/* CSS styling file provided for pw generator, TWH, 6-13-21 */
+
 *,
 *::before,
 *::after {
@@ -17,6 +19,7 @@ body {
   background-color: #f9fbfd;
 }
 
+/* Encapsulates password output, pw generate btn, header */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
@@ -30,6 +33,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Specific section dedicated to pw generator */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -72,6 +76,7 @@ header {
   clear: both;
 }
 
+/* Generate pw btn */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +102,7 @@ button[disabled] {
   float: right;
 }
 
+/* Password placeholder/output */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +124,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Media query for 690px */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -130,6 +137,7 @@ button[disabled] {
   }
 }
 
+/* Media query for 500 px */
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
