@@ -12,7 +12,7 @@ Describe from start to finish how the password is generated (use of prompts, dis
 <br>
 URL:
 <br>
-Check out the deployed application here: <link src = "https://tedheikkila.github.io/hw3-pw-generator/" target="_blank"/>
+Check out the deployed application here: https://tedheikkila.github.io/hw3-pw-generator/
 <br><br>
 Screenshots:
 <img src ="./images/hw3-first.png">
