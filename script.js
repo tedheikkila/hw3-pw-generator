@@ -92,6 +92,8 @@ function writePassword() {
       // Calls shuffle fxn and stores randomly shuffled array into randomPasswordArray
       var randomPasswordArray = shuffle(passwordArray)
 
+      console.log(typeof(randomPasswordArray))
+
       // Slices down the randomPasswordArray into the user's desired passwordLength of 8-128 chars (stores as slicedPasswordArray)
       var randomPasswordSliced = randomPasswordArray.slice(0, passwordLength)
       
