@@ -1,4 +1,4 @@
-# hw3-pw-generator
+# password-generator
 
 Summary:
 <br>
