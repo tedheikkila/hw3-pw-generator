@@ -12,7 +12,7 @@ Once the user clicks the red "Generate Password" button the first window asks th
 <br>
 URL:
 <br>
-Check out the deployed application here: https://tedheikkila.github.io/hw3-pw-generator/
+Check out the deployed application here: https://tedheikkila.github.io/password-generator/
 <br><br>
 Screenshots (displayed in order of program's natural sequence):
 <br> (1) <br>
